@@ -1,0 +1,27 @@
+.toggle-list{
+  margin: 15px;
+  position: relative;
+}
+
+.toggle-list__title{
+  margin-left: 40px;
+  font-weight: bold;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.toggle-list__checkbox{
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 9px;
+}
+
+.toggle-list__content{
+  margin-left: 15px;
+}
+
+.toggle-list__checkbox:checked ~ .toggle-list__content{
+  display: none;
+}

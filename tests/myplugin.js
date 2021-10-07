@@ -2,13 +2,13 @@ import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
-import MyPlugin from '../src/myplugin';
+import Togglelist from '../src/togglelist';
 
 /* global document */
 
-describe( 'MyPlugin', () => {
+describe( 'Togglelist', () => {
 	it( 'should be named', () => {
-		expect( MyPlugin.pluginName ).to.equal( 'MyPlugin' );
+		expect( Togglelist.pluginName ).to.equal( 'Togglelist' );
 	} );
 
 	describe( 'init()', () => {
@@ -23,7 +23,7 @@ describe( 'MyPlugin', () => {
 					Paragraph,
 					Heading,
 					Essentials,
-					MyPlugin
+					Togglelist
 				],
 				toolbar: [
 					'myButton'
@@ -36,10 +36,10 @@ describe( 'MyPlugin', () => {
 			return editor.destroy();
 		} );
 
-		it( 'should load MyPlugin', () => {
-			const myPlugin = editor.plugins.get( 'MyPlugin' );
+		it( 'should load Togglelist', () => {
+			const myPlugin = editor.plugins.get( 'Togglelist' );
 
-			expect( myPlugin ).to.be.an.instanceof( MyPlugin );
+			expect( myPlugin ).to.be.an.instanceof( Togglelist );
 		} );
 
 		it( 'should add an icon to the toolbar', () => {
